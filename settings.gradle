@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "DpadRecyclerView"
+include ':sample'
+include ':dpadrecyclerview'
+include ':dpadrecyclerview-testing'
+include ':dpadrecyclerview-test-fixtures'
+include ':dpadrecyclerview-compose'
+include ':app'

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.main.MainFragment">
+
+        <action
+            android:id="@+id/open_list"
+            app:destination="@id/list_fragment">
+
+            <argument
+                android:name="slowScroll"
+                android:defaultValue="false" />
+
+            <argument
+                android:name="reverseLayout"
+                android:defaultValue="false" />
+
+            <argument
+                android:name="showOverlay"
+                android:defaultValue="false" />
+
+            <argument
+                android:name="showHeader"
+                android:defaultValue="false" />
+
+        </action>
+
+        <action
+            android:id="@+id/open_horizontal_leanback"
+            app:destination="@id/leanback_horizontal_fragment" />
+
+        <action
+            android:id="@+id/open_standard_grid"
+            app:destination="@id/standard_grid_fragment">
+
+            <argument
+                android:name="reverseLayout"
+                android:defaultValue="false" />
+
+        </action>
+
+        <action
+            android:id="@+id/open_paging_grid"
+            app:destination="@id/grid_paging_fragment" />
+
+        <action
+            android:id="@+id/open_compose_grid"
+            app:destination="@id/compose_grid_fragment" />
+
+        <action
+            android:id="@+id/open_compose_list"
+            app:destination="@id/compose_list_fragment" />
+
+        <action
+            android:id="@+id/open_detail"
+            app:destination="@id/detail_fragment" />
+
+        <action
+            android:id="@+id/open_fading_edge"
+            app:destination="@id/fading_edge_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/standard_grid_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.grid.StandardGridFragment">
+
+        <argument
+            android:name="reverseLayout"
+            android:defaultValue="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/leanback_horizontal_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.focus.SearchPivotFragment" />
+
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.list.ListFragment">
+
+        <argument
+            android:name="slowScroll"
+            android:defaultValue="false" />
+
+        <argument
+            android:name="reverseLayout"
+            android:defaultValue="false" />
+
+        <argument
+            android:name="showOverlay"
+            android:defaultValue="false" />
+
+        <argument
+            android:name="showHeader"
+            android:defaultValue="false" />
+
+        <action
+            android:id="@+id/open_detail"
+            app:destination="@+id/detail_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.detail.DetailFragment" />
+
+    <action
+        android:id="@+id/open_grid"
+        app:destination="@id/grid_fragment">
+
+        <argument
+            android:name="slowScroll"
+            android:defaultValue="false" />
+
+        <argument
+            android:name="reverseLayout"
+            android:defaultValue="false" />
+
+        <argument
+            android:name="evenSpans"
+            android:defaultValue="true" />
+
+    </action>
+
+    <fragment
+        android:id="@+id/grid_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.grid.GridFragment">
+
+        <argument
+            android:name="slowScroll"
+            android:defaultValue="false" />
+
+        <argument
+            android:name="reverseLayout"
+            android:defaultValue="false" />
+
+        <argument
+            android:name="evenSpans"
+            android:defaultValue="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/grid_paging_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.grid.GridPagingFragment"/>
+
+    <fragment
+        android:id="@+id/compose_grid_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.compose.ComposeGridFragment" />
+
+    <fragment
+        android:id="@+id/compose_list_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.compose.ComposeListFragment" />
+
+    <fragment
+        android:id="@+id/fading_edge_fragment"
+        android:name="com.rubensousa.dpadrecyclerview.sample.ui.screen.fading.FadingEdgeFragment" />
+</navigation>

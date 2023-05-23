@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="dpadRecyclerViewStyle" format="reference" />
+
+    <declare-styleable name="DpadRecyclerView">
+        <attr name="dpadRecyclerViewSmoothFocusChangesEnabled" format="boolean" />
+        <attr name="dpadRecyclerViewFocusOutFront" format="boolean" />
+        <attr name="dpadRecyclerViewFocusOutBack" format="boolean" />
+        <attr name="dpadRecyclerViewFocusOutSideFront" format="boolean" />
+        <attr name="dpadRecyclerViewFocusOutSideBack" format="boolean" />
+        <attr name="dpadRecyclerViewChildAlignmentOffset" format="dimension" />
+        <attr name="dpadRecyclerViewChildAlignmentFraction" format="float" />
+        <attr name="dpadRecyclerViewChildAlignmentFractionEnabled" format="boolean" />
+        <attr name="dpadRecyclerViewParentAlignmentEdge" format="enum">
+            <enum name="none" value="0" />
+            <enum name="min" value="1" />
+            <enum name="max" value="2" />
+            <enum name="min_max" value="3" />
+        </attr>
+        <attr name="dpadRecyclerViewParentAlignmentOffset" format="dimension" />
+        <attr name="dpadRecyclerViewParentAlignmentFraction" format="float" />
+        <attr name="dpadRecyclerViewParentAlignmentFractionEnabled" format="boolean" />
+        <attr name="dpadRecyclerViewParentAlignmentPreferKeylineOverEdge" format="dimension" />
+        <attr name="dpadRecyclerViewFocusableDirection" format="enum">
+            <enum name="standard" value="0" />
+            <enum name="circular" value="1" />
+            <enum name="continuous" value="2" />
+        </attr>
+        <attr name="android:gravity" />
+        <attr name="android:focusable" />
+        <attr name="android:focusableInTouchMode" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+
+</resources>

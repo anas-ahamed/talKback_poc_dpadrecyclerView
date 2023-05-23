@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rowParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/rowTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/feature_edge_spacing"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:importantForAccessibility="yes"
+        android:textSize="14sp"
+        tools:text="Headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.rubensousa.dpadrecyclerview.DpadRecyclerView
+        android:id="@+id/rowRecycler"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:importantForAccessibility="yes"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:dpadRecyclerViewChildAlignmentFraction="0"
+        app:dpadRecyclerViewFocusOutBack="false"
+        app:dpadRecyclerViewFocusOutFront="false"
+        app:dpadRecyclerViewParentAlignmentOffset="@dimen/feature_edge_spacing"
+        app:dpadRecyclerViewParentAlignmentFraction="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowTitle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

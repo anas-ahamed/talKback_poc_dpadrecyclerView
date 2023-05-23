@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright © 2020, Discovery Networks International
+  ~ Written under contract by Robosoft Technologies Pvt. Ltd.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framePoster"
+    android:layout_width="@dimen/card_poster_width"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/showCardContainer"
+        android:layout_width="@dimen/card_poster_width_image"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_show_container"
+        android:layout_marginTop="@dimen/margin_top_show_container"
+        android:layout_marginEnd="@dimen/margin_show_container"
+        android:layout_marginBottom="@dimen/margin_top_show_container"
+        app:layout_constraintDimensionRatio="@string/aspect_poster_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/rounded_corner_image_view" />
+
+        <TextView
+            android:id="@+id/badgeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/grid_16"
+            android:layout_marginStart="@dimen/grid_4"
+            android:layout_marginEnd="@dimen/grid_20"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="@dimen/grid_4"
+            android:paddingEnd="@dimen/grid_4"
+            android:text="Live"
+            android:visibility="invisible"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@+id/cardImageContainer"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/cardImageContainer"
+            app:layout_constraintTop_toTopOf="@id/cardImageContainer"
+            tools:ignore="SmallSp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_6"
+        android:layout_marginTop="@dimen/grid_12"
+        android:ellipsize="end"
+        android:gravity="top|center_vertical"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/neutral_10_alpha70"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/imageBrandLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showCardContainer"
+        tools:text="The Tiger" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageBrandLogo"
+        android:layout_width="@dimen/width_tlc_logo"
+        android:layout_height="@dimen/height_tlc_logo"
+        android:layout_marginTop="@dimen/grid_12"
+        android:layout_marginEnd="@dimen/grid_6"
+        android:alpha="@dimen/shows_page_network_icon_opacity"
+        android:padding="@dimen/logo_padding"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showCardContainer"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
